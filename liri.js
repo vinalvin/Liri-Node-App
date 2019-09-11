@@ -1,3 +1,4 @@
+// Set the environment variables and keys
 require("dotenv").config();
 var keys = require("./apikey.js");
 
