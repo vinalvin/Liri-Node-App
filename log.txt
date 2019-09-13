@@ -10,3 +10,5 @@ movie-this
 spotify-this-song
 spotify-this-song
 spotify-this-song
+spotify-this-song
+movie-this

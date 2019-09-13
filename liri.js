@@ -34,7 +34,16 @@ function spotifyASong(userInput) {
 }
 
 function searchConcert(userInput) {
-
+    axios.get("https://rest.bandsintown.com/artists/" + userInput + "/events?app_id=codingbootcamp").then(function(response) {
+            console.log('\n');
+            console.log('Venue Name:', response.data[0].venue.name);
+            console.log('Event Date:', moment(response.data[0].datatime).format('MM/DD/YYYY'));
+            console.log('Location:', response.data[0].venue.city);
+            console.log('/n');
+        })
+        .catch(function(error) {
+            console.log(error);
+        })
 }
 
 function movieThis(userInput) {
@@ -48,8 +57,8 @@ function movieThis(userInput) {
 
 if (userCommand === 'spotify-this-song') {
     spotifyASong(userInput);
-} else if (userCommand === 'concert-this') {
-    concertThis(userInput);
+} else if (userCommand === 'search-concert') {
+    searchConcert(userInput);
 } else if (userCommand === 'movie-this') {
     movieThis(userInput);
 } else if (userCommand === 'do-what-it-says') {
@@ -65,8 +74,8 @@ if (userCommand === 'spotify-this-song') {
             console.log(input)
             if (cmd === 'spotify-this-song') {
                 spotifyASong(input)
-            } else if (cmd === 'concert-this') {
-                concertThis(input);
+            } else if (cmd === 'search-concert') {
+                searchConcert(input);
             } else if (cmd === 'movie-this') {
                 movieThis(input);
             }
