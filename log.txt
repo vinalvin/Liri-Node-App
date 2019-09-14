@@ -12,3 +12,12 @@ spotify-this-song
 spotify-this-song
 spotify-this-song
 movie-this
+spotify-this-song
+search-concert
+movie-this
+movie-this
+search-movie
+search-concert
+search-concert
+search-concert
+spotify-song
